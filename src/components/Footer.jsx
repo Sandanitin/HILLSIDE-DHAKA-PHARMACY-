@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/images/logo.png" alt="Hillside Dhaka Pharmacy logo" className="h-10 w-10 rounded" loading="lazy" />
+              <img src="/images/logo.png" alt="Hillside Dhaka Pharmacy logo" className="h-10 w-auto rounded" loading="lazy" />
               <span className="font-bold text-2xl text-white">Hillside Dhaka Pharmacy</span>
             </div>
             <p className="text-gray-300 text-lg mb-6 max-w-md">

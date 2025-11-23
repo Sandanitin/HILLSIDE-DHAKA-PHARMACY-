@@ -11,7 +11,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-2" aria-label="Home">
-              <img src="/images/logo.png" alt="Hillside Dhaka Pharmacy logo" className="h-10 w-10 md:h-12 md:w-12" loading="lazy" />
+              <img src="/images/logo.png" alt="Hillside Dhaka Pharmacy logo" className="h-10 w-auto md:h-12" loading="lazy" />
               <div className="leading-tight">
                 <span className="font-bold text-[color:var(--primary)] text-base md:text-lg block tracking-wide">HILLSIDE DHAKA</span>
                 <span className="block text-xs md:text-sm text-slate-600 font-semibold tracking-widest">PHARMACY</span>
