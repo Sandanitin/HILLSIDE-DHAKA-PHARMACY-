@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Layout from './components/Layout';
+import ScrollToTop from './pages/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -12,7 +13,7 @@ import Immunizations from './pages/Immunizations';
 import ClinicalServices from './pages/ClinicalServices';
 import SpecialtyServices from './pages/SpecialtyServices';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import ScrollToTop from './pages/ScrollToTop';
+import Careers from './pages/Careers';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/services/specialty-services" element={<SpecialtyServices />} />
           <Route path="/health-resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Route>
       </Routes>

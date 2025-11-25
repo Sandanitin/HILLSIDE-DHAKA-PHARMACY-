@@ -537,11 +537,16 @@ export const translations = {
             tagline: 'Your local community pharmacy serving the Jamaica, NY neighborhood for many years. Fast prescriptions, free delivery, and personalized care.',
             quickLinks: {
                 title: 'Quick Links',
-                home: 'Home',
-                about: 'About Us',
-                services: 'Services',
-                healthTips: 'Health Tips',
-                contact: 'Contact'
+                // Careers section
+                careers: {
+                    hero: {
+                        title: 'Careers',
+                        titleHighlight: '',
+                        subtitle: 'Join our team and make a difference in the community.'
+                    },
+                    description: 'We are always looking for passionate individuals to join our team.',
+                    contactUs: 'Contact Us'
+                },
             },
             ourServices: {
                 title: 'Our Services',
@@ -557,6 +562,82 @@ export const translations = {
                 sunday: 'Sun: Closed'
             },
             delivery: 'Free Home Delivery'
+        },
+        careers: {
+            hero: {
+                title: 'Careers',
+                titleHighlight: '',
+                subtitle: 'Join our team at Hillside Dhaka Pharmacy'
+            },
+            about: {
+                title: 'Why Work With Us?',
+                subtitle: 'Be part of a healthcare team that makes a real difference in Jamaica, NY',
+                description: 'At Hillside Dhaka Pharmacy, we\'re more than just a pharmacy – we\'re a healthcare family dedicated to serving our community with compassion, expertise, and personalized care.'
+            },
+            benefits: {
+                title: 'Benefits & Perks',
+                items: [
+                    'Competitive salary and benefits package',
+                    'Health, dental, and vision insurance',
+                    'Paid time off and holidays',
+                    'Professional development opportunities',
+                    'Flexible scheduling options',
+                    'Employee discounts on prescriptions and products',
+                    'Supportive team environment',
+                    'Career advancement opportunities'
+                ]
+            },
+            positions: {
+                title: 'Current Openings',
+                subtitle: 'Join our growing team of healthcare professionals',
+                items: [
+                    {
+                        title: 'Pharmacist',
+                        type: 'Full-Time',
+                        description: 'Licensed pharmacist responsible for dispensing medications, providing patient counseling, and ensuring quality pharmaceutical care.'
+                    },
+                    {
+                        title: 'Pharmacy Technician',
+                        type: 'Full-Time/Part-Time',
+                        description: 'Assist pharmacists in preparing and dispensing medications, managing inventory, and providing excellent customer service.'
+                    },
+                    {
+                        title: 'Customer Service Representative',
+                        type: 'Part-Time',
+                        description: 'Front desk position handling customer inquiries, prescription drop-offs, and providing friendly service to our patients.'
+                    },
+                    {
+                        title: 'Delivery Driver',
+                        type: 'Part-Time',
+                        description: 'Responsible for timely and safe delivery of prescriptions and medical supplies to our community members.'
+                    }
+                ]
+            },
+            culture: {
+                title: 'Our Culture',
+                subtitle: 'A workplace where you can grow and make a difference',
+                values: [
+                    {
+                        title: 'Community First',
+                        description: 'We prioritize the health and well-being of our Jamaica, NY community above all else.'
+                    },
+                    {
+                        title: 'Excellence in Care',
+                        description: 'We maintain the highest standards of pharmaceutical care and customer service.'
+                    },
+                    {
+                        title: 'Team Collaboration',
+                        description: 'We work together to provide the best possible outcomes for our patients.'
+                    },
+                    {
+                        title: 'Continuous Learning',
+                        description: 'We encourage ongoing education and professional development for all team members.'
+                    }
+                ]
+            },
+            description: 'Explore opportunities to work with us and make a difference in the community.',
+            contactUs: 'Contact Us',
+            applyNow: 'Apply Now'
         }
     },
     bn: {
@@ -955,112 +1036,112 @@ export const translations = {
             }
         },
         immunizations: {
-                hero: {
-                    title: 'টিকাকরণ এবং',
-                    titleHighlight: 'ভ্যাকসিন',
-                    subtitle: 'আমাদের বিস্তৃত টিকাকরণ সেবা দিয়ে নিজেকে এবং আপনার পরিবারকে রক্ষা করুন। ওয়াক-ইন স্বাগত!'
-                },
-                sectionTitle: 'উপলব্ধ ভ্যাকসিন',
-                sectionSubtitle: 'আপনার স্বাস্থ্য রক্ষা করা আমাদের অগ্রাধিকার',
-                vaccines: [
-                    {
-                        title: 'ফ্লু (ইনফ্লুয়েঞ্জা)',
-                        description: '৬ মাস এবং তার বেশি বয়সের সকলের জন্য বার্ষিক ফ্লু ভ্যাকসিন'
-                    },
-                    {
-                        title: 'কোভিড-১৯',
-                        description: 'সর্বশেষ কোভিড-১৯ ভ্যাকসিন এবং বুস্টার উপলব্ধ'
-                    },
-                    {
-                        title: 'আরএসভি',
-                        description: 'যোগ্য রোগীদের জন্য শ্বাসযন্ত্রের সিনসিটিয়াল ভাইরাস ভ্যাকসিন'
-                    },
-                    {
-                        title: 'শিংলস',
-                        description: '৫০ বছর বা তার বেশি বয়সের প্রাপ্তবয়স্কদের জন্য শিংগ্রিক্স ভ্যাকসিন'
-                    },
-                    {
-                        title: 'নিউমোনিয়া',
-                        description: 'প্রাপ্তবয়স্ক এবং শিশুদের জন্য নিউমোকক্কাল ভ্যাকসিন'
-                    },
-                    {
-                        title: 'ভ্রমণ ভ্যাকসিন',
-                        description: 'আন্তর্জাতিক ভ্রমণ গন্তব্যের জন্য ভ্যাকসিন'
-                    }
-                ],
-                features: [
-                    {
-                        title: 'ওয়াক-ইন স্বাগত',
-                        description: 'বেশিরভাগ ভ্যাকসিনের জন্য কোন অ্যাপয়েন্টমেন্ট প্রয়োজন নেই। অপারেটিং সময়ের মধ্যে আসুন।'
-                    },
-                    {
-                        title: 'বীমা বিলিং',
-                        description: 'আমরা সরাসরি অধিকাংশ বীমা পরিকল্পনা বিল করি। বেশিরভাগ ভ্যাকসিন বিনা খরচে কভার করা হয়।'
-                    },
-                    {
-                        title: 'টিকাকরণ রেকর্ড',
-                        description: 'আমরা বিস্তারিত রেকর্ড বজায় রাখি এবং প্রয়োজনে ডকুমেন্টেশন প্রদান করতে পারি।'
-                    }
-                ],
-                cta: {
-                    title: 'আজই আপনার ভ্যাকসিন নিন',
-                    subtitle: 'ওয়াক-ইন স্বাগত বা সময় নির্ধারণ করতে কল করুন',
-                    contactUs: 'যোগাযোগ করুন'
-                }
+            hero: {
+                title: 'টিকাকরণ এবং',
+                titleHighlight: 'ভ্যাকসিন',
+                subtitle: 'আমাদের বিস্তৃত টিকাকরণ সেবা দিয়ে নিজেকে এবং আপনার পরিবারকে রক্ষা করুন। ওয়াক-ইন স্বাগত!'
             },
-            specialtyServices: {
-                hero: {
-                    title: 'বিশেষায়িত',
-                    titleHighlight: 'সেবা',
-                    subtitle: 'আপনার অনন্য চাহিদা পূরণের জন্য বিশেষায়িত ফার্মেসি সেবা'
+            sectionTitle: 'উপলব্ধ ভ্যাকসিন',
+            sectionSubtitle: 'আপনার স্বাস্থ্য রক্ষা করা আমাদের অগ্রাধিকার',
+            vaccines: [
+                {
+                    title: 'ফ্লু (ইনফ্লুয়েঞ্জা)',
+                    description: '৬ মাস এবং তার বেশি বয়সের সকলের জন্য বার্ষিক ফ্লু ভ্যাকসিন'
                 },
-                services: [
-                    {
-                        title: 'ডিএমই সরবরাহ',
-                        description: 'টেকসই চিকিৎসা সরঞ্জাম এবং সরবরাহ উপলব্ধ। স্টকে কী আছে সে সম্পর্কে আমাদের দলকে জিজ্ঞাসা করুন।'
-                    },
-                    {
-                        title: 'ব্লিস্টার প্যাকেজিং',
-                        description: 'সহজ দৈনিক ব্যবস্থাপনা এবং সম্মতির জন্য ব্লিস্টার প্যাক দিয়ে আপনার ওষুধ সংগঠিত করুন।'
-                    },
-                    {
-                        title: 'শ্রমিক ক্ষতিপূরণ সহায়তা',
-                        description: 'আমরা শ্রমিক ক্ষতিপূরণ প্রেসক্রিপশন পরিচালনা করি এবং আপনার নিয়োগকর্তার সাথে সমন্বয় করি।'
-                    },
-                    {
-                        title: 'বিশেষ অর্ডার',
-                        description: 'খুঁজে পাওয়া কঠিন ওষুধ? আমরা আপনার প্রয়োজনীয় জিনিস পেতে বিশেষ অর্ডার গ্রহণ করি।'
-                    }
-                ],
-                cta: {
-                    title: 'কিছু বিশেষ প্রয়োজন?',
-                    subtitle: 'আমাদের বিশেষায়িত সেবা সম্পর্কে আমাদের সাথে যোগাযোগ করুন'
+                {
+                    title: 'কোভিড-১৯',
+                    description: 'সর্বশেষ কোভিড-১৯ ভ্যাকসিন এবং বুস্টার উপলব্ধ'
+                },
+                {
+                    title: 'আরএসভি',
+                    description: 'যোগ্য রোগীদের জন্য শ্বাসযন্ত্রের সিনসিটিয়াল ভাইরাস ভ্যাকসিন'
+                },
+                {
+                    title: 'শিংলস',
+                    description: '৫০ বছর বা তার বেশি বয়সের প্রাপ্তবয়স্কদের জন্য শিংগ্রিক্স ভ্যাকসিন'
+                },
+                {
+                    title: 'নিউমোনিয়া',
+                    description: 'প্রাপ্তবয়স্ক এবং শিশুদের জন্য নিউমোকক্কাল ভ্যাকসিন'
+                },
+                {
+                    title: 'ভ্রমণ ভ্যাকসিন',
+                    description: 'আন্তর্জাতিক ভ্রমণ গন্তব্যের জন্য ভ্যাকসিন'
                 }
-            },
-            clinicalServices: {
-                hero: {
-                    title: 'ক্লিনিক্যাল ও স্বাস্থ্য',
-                    titleHighlight: 'সেবা',
-                    subtitle: 'আপনাকে সুস্থ রাখতে বিশেষজ্ঞ স্বাস্থ্যসেবা সেবা'
+            ],
+            features: [
+                {
+                    title: 'ওয়াক-ইন স্বাগত',
+                    description: 'বেশিরভাগ ভ্যাকসিনের জন্য কোন অ্যাপয়েন্টমেন্ট প্রয়োজন নেই। অপারেটিং সময়ের মধ্যে আসুন।'
                 },
-                services: [
-                    {
-                        title: 'রক্তচাপ পর্যবেক্ষণ',
-                        description: 'বিনামূল্যে রক্তচাপ পরীক্ষা উপলব্ধ। নিয়মিত পর্যবেক্ষণ এবং ব্যক্তিগত পরামর্শ দিয়ে আপনার স্বাস্থ্য ট্র্যাক করুন।'
-                    },
-                    {
-                        title: 'ডায়াবেটিস কাউন্সেলিং',
-                        description: 'ডায়াবেটিস ব্যবস্থাপনা, গ্লুকোজ পর্যবেক্ষণ এবং ওষুধ থেরাপিতে বিশেষজ্ঞ নির্দেশনা।'
-                    },
-                    {
-                        title: 'ওষুধ থেরাপি ব্যবস্থাপনা',
-                        description: 'আপনার থেরাপি অপ্টিমাইজ করতে এবং মিথস্ক্রিয়া এড়াতে ব্যাপক ওষুধ পর্যালোচনা।'
-                    },
-                    {
-                        title: 'বিনামূল্যে স্বাস্থ্য স্ক্রিনিং',
-                        description: 'স্বাস্থ্য সমস্যা প্রাথমিকভাবে সনাক্ত এবং প্রতিরোধ করতে বিভিন্ন স্বাস্থ্য স্ক্রিনিং উপলব্ধ।'
-                    }
-                ],
+                {
+                    title: 'বীমা বিলিং',
+                    description: 'আমরা সরাসরি অধিকাংশ বীমা পরিকল্পনা বিল করি। বেশিরভাগ ভ্যাকসিন বিনা খরচে কভার করা হয়।'
+                },
+                {
+                    title: 'টিকাকরণ রেকর্ড',
+                    description: 'আমরা বিস্তারিত রেকর্ড বজায় রাখি এবং প্রয়োজনে ডকুমেন্টেশন প্রদান করতে পারি।'
+                }
+            ],
+            cta: {
+                title: 'আজই আপনার ভ্যাকসিন নিন',
+                subtitle: 'ওয়াক-ইন স্বাগত বা সময় নির্ধারণ করতে কল করুন',
+                contactUs: 'যোগাযোগ করুন'
+            }
+        },
+        specialtyServices: {
+            hero: {
+                title: 'বিশেষায়িত',
+                titleHighlight: 'সেবা',
+                subtitle: 'আপনার অনন্য চাহিদা পূরণের জন্য বিশেষায়িত ফার্মেসি সেবা'
+            },
+            services: [
+                {
+                    title: 'ডিএমই সরবরাহ',
+                    description: 'টেকসই চিকিৎসা সরঞ্জাম এবং সরবরাহ উপলব্ধ। স্টকে কী আছে সে সম্পর্কে আমাদের দলকে জিজ্ঞাসা করুন।'
+                },
+                {
+                    title: 'ব্লিস্টার প্যাকেজিং',
+                    description: 'সহজ দৈনিক ব্যবস্থাপনা এবং সম্মতির জন্য ব্লিস্টার প্যাক দিয়ে আপনার ওষুধ সংগঠিত করুন।'
+                },
+                {
+                    title: 'শ্রমিক ক্ষতিপূরণ সহায়তা',
+                    description: 'আমরা শ্রমিক ক্ষতিপূরণ প্রেসক্রিপশন পরিচালনা করি এবং আপনার নিয়োগকর্তার সাথে সমন্বয় করি।'
+                },
+                {
+                    title: 'বিশেষ অর্ডার',
+                    description: 'খুঁজে পাওয়া কঠিন ওষুধ? আমরা আপনার প্রয়োজনীয় জিনিস পেতে বিশেষ অর্ডার গ্রহণ করি।'
+                }
+            ],
+            cta: {
+                title: 'কিছু বিশেষ প্রয়োজন?',
+                subtitle: 'আমাদের বিশেষায়িত সেবা সম্পর্কে আমাদের সাথে যোগাযোগ করুন'
+            }
+        },
+        clinicalServices: {
+            hero: {
+                title: 'ক্লিনিক্যাল ও স্বাস্থ্য',
+                titleHighlight: 'সেবা',
+                subtitle: 'আপনাকে সুস্থ রাখতে বিশেষজ্ঞ স্বাস্থ্যসেবা সেবা'
+            },
+            services: [
+                {
+                    title: 'রক্তচাপ পর্যবেক্ষণ',
+                    description: 'বিনামূল্যে রক্তচাপ পরীক্ষা উপলব্ধ। নিয়মিত পর্যবেক্ষণ এবং ব্যক্তিগত পরামর্শ দিয়ে আপনার স্বাস্থ্য ট্র্যাক করুন।'
+                },
+                {
+                    title: 'ডায়াবেটিস কাউন্সেলিং',
+                    description: 'ডায়াবেটিস ব্যবস্থাপনা, গ্লুকোজ পর্যবেক্ষণ এবং ওষুধ থেরাপিতে বিশেষজ্ঞ নির্দেশনা।'
+                },
+                {
+                    title: 'ওষুধ থেরাপি ব্যবস্থাপনা',
+                    description: 'আপনার থেরাপি অপ্টিমাইজ করতে এবং মিথস্ক্রিয়া এড়াতে ব্যাপক ওষুধ পর্যালোচনা।'
+                },
+                {
+                    title: 'বিনামূল্যে স্বাস্থ্য স্ক্রিনিং',
+                    description: 'স্বাস্থ্য সমস্যা প্রাথমিকভাবে সনাক্ত এবং প্রতিরোধ করতে বিভিন্ন স্বাস্থ্য স্ক্রিনিং উপলব্ধ।'
+                }
+            ],
             cta: {
                 title: 'একটি পরামর্শ নির্ধারণ করুন',
                 subtitle: 'আমাদের লাইসেন্সপ্রাপ্ত ফার্মাসিস্টদের সাথে কথা বলুন'
@@ -1175,6 +1256,82 @@ export const translations = {
                 sunday: 'রবি: বন্ধ'
             },
             delivery: 'বিনামূল্যে হোম ডেলিভারি'
+        },
+        careers: {
+            hero: {
+                title: 'ক্যারিয়ার',
+                titleHighlight: '',
+                subtitle: 'হিলসাইড ঢাকা ফার্মেসিতে আমাদের দলে যোগ দিন'
+            },
+            about: {
+                title: 'আমাদের সাথে কেন কাজ করবেন?',
+                subtitle: 'জ্যামাইকা, এনওয়াই তে আসল পার্থক্য তৈরি করে এমন একটি স্বাস্থ্যসেবা দলের অংশ হন',
+                description: 'হিলসাইড ঢাকা ফার্মেসিতে, আমরা শুধু একটি ফার্মেসি নই - আমরা একটি স্বাস্থ্যসেবা পরিবার যা সহানুভূতি, দক্ষতা এবং ব্যক্তিগত যত্নের সাথে আমাদের সম্প্রদায়কে সেবা দেওয়ার প্রতিশ্রুতিবদ্ধ।'
+            },
+            benefits: {
+                title: 'সুবিধা ও সুযোগ',
+                items: [
+                    'প্রতিযোগিতামূলক বেতন এবং সুবিধা প্যাকেজ',
+                    'স্বাস্থ্য, দন্ত এবং চক্ষু বীমা',
+                    'অর্জিত সময় এবং ছুটির দিন',
+                    'পেশাদার উন্নয়নের সুযোগ',
+                    'নমনীয় সময়সূচী বিকল্প',
+                    'প্রেসক্রিপশন এবং পণ্যগুলিতে কর্মচারী ছাড়',
+                    'সহায়ক দলের পরিবেশ',
+                    'ক্যারিয়ার অগ্রগতির সুযোগ'
+                ]
+            },
+            positions: {
+                title: 'বর্তমান শূন্যপদ',
+                subtitle: 'আমাদের ক্রমবর্ধমান স্বাস্থ্যসেবা পেশাদারদের দলে যোগ দিন',
+                items: [
+                    {
+                        title: 'ফার্মাসিস্ট',
+                        type: 'পূর্ণ-সময়',
+                        description: 'ওষুধ সরবরাহ, রোগী পরামর্শ প্রদান এবং গুণমান ফার্মাসিউটিকাল যত্ন নিশ্চিত করার জন্য দায়িত্বপ্রাপ্ত লাইসেন্সপ্রাপ্ত ফার্মাসিস্ট।'
+                    },
+                    {
+                        title: 'ফার্মেসি টেকনিশিয়ান',
+                        type: 'পূর্ণ-সময়/অংশ-সময়',
+                        description: 'ওষুধ প্রস্তুত এবং সরবরাহে ফার্মাসিস্টদের সহায়তা করুন, ইনভেন্টরি পরিচালনা করুন এবং চমৎকার গ্রাহক পরিষেবা প্রদান করুন।'
+                    },
+                    {
+                        title: 'গ্রাহক পরিষেবা প্রতিনিধি',
+                        type: 'অংশ-সময়',
+                        description: 'গ্রাহক অনুসন্ধান, প্রেসক্রিপশন ড্রপ-অফ পরিচালনা এবং আমাদের রোগীদের বন্ধুত্বপূর্ণ পরিষেবা প্রদানের জন্য সামনের ডেস্ক পজিশন।'
+                    },
+                    {
+                        title: 'ডেলিভারি ড্রাইভার',
+                        type: 'অংশ-সময়',
+                        description: 'আমাদের সম্প্রদায়ের সদস্যদের কাছে প্রেসক্রিপশন এবং চিকিৎসা সরবরাহের সময়োপযোগী এবং নিরাপদ ডেলিভারির জন্য দায়িত্বপ্রাপ্ত।'
+                    }
+                ]
+            },
+            culture: {
+                title: 'আমাদের সংস্কৃতি',
+                subtitle: 'একটি কর্মক্ষেত্র যেখানে আপনি বাড়তে পারেন এবং পার্থক্য তৈরি করতে পারেন',
+                values: [
+                    {
+                        title: 'সম্প্রদায় প্রথম',
+                        description: 'আমরা আমাদের জ্যামাইকা, এনওয়াই সম্প্রদায়ের স্বাস্থ্য এবং কল্যাণকে সবচেয়ে বেশি অগ্রাধিকার দিই।'
+                    },
+                    {
+                        title: 'যত্নে উৎকর্ষ',
+                        description: 'আমরা ফার্মাসিউটিকাল যত্ন এবং গ্রাহক পরিষেবার সর্বোচ্চ মান বজায় রাখি।'
+                    },
+                    {
+                        title: 'দল সহযোগিতা',
+                        description: 'আমরা আমাদের রোগীদের জন্য সেরা সম্ভাব্য ফলাফল প্রদানের জন্য একসাথে কাজ করি।'
+                    },
+                    {
+                        title: 'অবিরাম শেখা',
+                        description: 'আমরা সমস্ত দলের সদস্যদের জন্য চলমান শিক্ষা এবং পেশাদার উন্নয়নকে উৎসাহিত করি।'
+                    }
+                ]
+            },
+            description: 'আমাদের সাথে কাজ করার সুযোগ অন্বেষণ করুন এবং সম্প্রদায়ে পার্থক্য তৈরি করুন।',
+            contactUs: 'যোগাযোগ করুন',
+            applyNow: 'আবেদন করুন'
         }
     }
 };
