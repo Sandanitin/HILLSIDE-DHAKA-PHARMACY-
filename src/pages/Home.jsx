@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '@/components/SEO'
+import { useTranslations } from '../utils/translationHelpers'
 
 export default function Home() {
+  const t = useTranslations('home')
   return (
     <>
       <SEO
@@ -23,23 +25,23 @@ export default function Home() {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 text-sm font-medium text-slate-700">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                Serving the Neighborhood for Many Years
+                {t.hero?.badge || 'Serving the Neighborhood for Many Years'}
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-                Your Local{' '}
+                {t.hero?.title || 'Your Local'}{' '}
                 <span className="bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] bg-clip-text text-transparent">
-                  Pharmacy
+                  {t.hero?.titleHighlight || 'Pharmacy'}
                 </span>
               </h1>
               <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
-                Fast, friendly, and reliable service. Free home delivery, expert medication counseling, and personalized care for our community in Jamaica, NY.
+                {t.hero?.subtitle || 'Fast, friendly, and reliable service. Free home delivery, expert medication counseling, and personalized care for our community in Jamaica, NY.'}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link
                   to="/contact"
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  Contact Us
+                  {t.hero?.ctaContact || 'Contact Us'}
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                   </svg>
@@ -48,7 +50,7 @@ export default function Home() {
                   to="/services"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 font-semibold rounded-xl border-2 border-slate-200 hover:border-[color:var(--primary)] hover:text-[color:var(--primary)] transition-all duration-200"
                 >
-                  Our Services
+                  {t.hero?.ctaServices || 'Our Services'}
                 </Link>
               </div>
             </div>
@@ -81,8 +83,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
-                <p className="text-3xl font-bold text-slate-900">10-15 min</p>
-                <p className="text-sm text-slate-600 font-medium">Prescription Ready</p>
+                <p className="text-3xl font-bold text-slate-900">{t.trustBar?.prescriptionTime || '10-15 min'}</p>
+                <p className="text-sm text-slate-600 font-medium">{t.trustBar?.prescriptionLabel || 'Prescription Ready'}</p>
               </div>
             </div>
             <div className="group p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-100 hover:border-[color:var(--primary)]/20 transition-all duration-300 hover:shadow-lg">
@@ -92,8 +94,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <p className="text-3xl font-bold text-slate-900">Free</p>
-                <p className="text-sm text-slate-600 font-medium">Home Delivery</p>
+                <p className="text-3xl font-bold text-slate-900">{t.trustBar?.deliveryLabel || 'Free'}</p>
+                <p className="text-sm text-slate-600 font-medium">{t.trustBar?.deliverySubLabel || 'Home Delivery'}</p>
               </div>
             </div>
             <div className="group p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-100 hover:border-[color:var(--primary)]/20 transition-all duration-300 hover:shadow-lg">
@@ -103,8 +105,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                   </svg>
                 </div>
-                <p className="text-3xl font-bold text-slate-900">Multilingual</p>
-                <p className="text-sm text-slate-600 font-medium">Staff Available</p>
+                <p className="text-3xl font-bold text-slate-900">{t.trustBar?.staffLabel || 'Multilingual'}</p>
+                <p className="text-sm text-slate-600 font-medium">{t.trustBar?.staffSubLabel || 'Staff Available'}</p>
               </div>
             </div>
             <div className="group p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-100 hover:border-[color:var(--primary)]/20 transition-all duration-300 hover:shadow-lg">
@@ -114,8 +116,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                   </svg>
                 </div>
-                <p className="text-3xl font-bold text-slate-900">Most</p>
-                <p className="text-sm text-slate-600 font-medium">Insurance Accepted</p>
+                <p className="text-3xl font-bold text-slate-900">{t.trustBar?.insuranceLabel || 'Most'}</p>
+                <p className="text-sm text-slate-600 font-medium">{t.trustBar?.insuranceSubLabel || 'Insurance Accepted'}</p>
               </div>
             </div>
           </div>
@@ -126,10 +128,10 @@ export default function Home() {
       <section id="services" className="bg-gradient-to-br from-slate-50 to-white">
         <div className="section section-y">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Our Services</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">Comprehensive pharmacy services designed to keep you healthy and well.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">{t.services?.title || 'Our Services'}</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">{t.services?.subtitle || 'Comprehensive pharmacy services designed to keep you healthy and well.'}</p>
             <Link to="/services" className="inline-flex items-center mt-6 text-[color:var(--primary)] hover:text-[color:var(--primary-hover)] font-semibold">
-              View all services
+              {t.services?.viewAll || 'View all services'}
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
@@ -138,29 +140,21 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: 'Prescriptions',
-                body: 'Fast prescription filling, hassle-free transfers, medication synchronization, and automatic refill reminders.',
                 href: '/services/prescriptions',
                 icon: '💊',
                 color: 'from-blue-500 to-blue-600'
               },
               {
-                title: 'Immunizations',
-                body: 'Flu, COVID-19, RSV, Shingles, Pneumonia vaccines and more. Walk-ins welcome or schedule an appointment.',
                 href: '/services/immunizations',
                 icon: '💉',
                 color: 'from-green-500 to-green-600'
               },
               {
-                title: 'Clinical Services',
-                body: 'Blood pressure checks, diabetes counseling, glucose monitoring, free medication consultations.',
                 href: '/services/clinical-services',
                 icon: '🩺',
                 color: 'from-purple-500 to-purple-600'
               },
               {
-                title: 'Specialty Services',
-                body: 'DME supplies, workers\' compensation support, blister packaging, and special medication orders.',
                 href: '/services/specialty-services',
                 icon: '⚕️',
                 color: 'from-orange-500 to-orange-600'
@@ -173,10 +167,10 @@ export default function Home() {
                     <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${card.color} text-white text-2xl mb-6 shadow-lg`}>
                       {card.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[color:var(--primary)] transition-colors duration-200">{card.title}</h3>
-                    <p className="text-slate-600 leading-relaxed mb-6">{card.body}</p>
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[color:var(--primary)] transition-colors duration-200">{t.services?.cards?.[idx]?.title || ''}</h3>
+                    <p className="text-slate-600 leading-relaxed mb-6">{t.services?.cards?.[idx]?.body || ''}</p>
                     <div className="flex items-center text-[color:var(--primary)] font-semibold group-hover:translate-x-1 transition-transform duration-200">
-                      Learn more
+                      {t.services?.cards?.[idx]?.learnMore || 'Learn more'}
                       <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                       </svg>
@@ -193,46 +187,22 @@ export default function Home() {
       <section className="bg-white">
         <div className="section section-y">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Why Choose Hillside Dhaka Pharmacy</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">We're more than just a pharmacy — we're your healthcare partner in the community.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">{t.whyChoose?.title || 'Why Choose Hillside Dhaka Pharmacy'}</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">{t.whyChoose?.subtitle || "We're more than just a pharmacy — we're your healthcare partner in the community."}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: '🚚',
-                title: 'Free Home Delivery',
-                description: 'Get your prescriptions delivered to your door at no extra cost. Every day delivery service available.'
-              },
-              {
-                icon: '⚡',
-                title: 'Fast Service',
-                description: 'Most prescriptions ready in 10-15 minutes. Walk-ins welcome, no appointment necessary.'
-              },
-              {
-                icon: '🌐',
-                title: 'Multilingual Staff',
-                description: 'Our team speaks English and Bengali to better serve our diverse community.'
-              },
-              {
-                icon: '💰',
-                title: 'Competitive Prices',
-                description: 'Competitive cash pricing and discount programs. We accept Medicaid, Medicare, and most insurances.'
-              },
-              {
-                icon: '👨‍⚕️',
-                title: 'Expert Counseling',
-                description: 'Licensed pharmacists available for free medication consultations and OTC recommendations.'
-              },
-              {
-                icon: '🏘️',
-                title: 'Community Focused',
-                description: 'Family-owned pharmacy serving the Bengal i neighborhood for many years with personalized care.'
-              }
+              { icon: '🚚' },
+              { icon: '⚡' },
+              { icon: '🌐' },
+              { icon: '💰' },
+              { icon: '👨‍⚕️' },
+              { icon: '🏘️' }
             ].map((feature, i) => (
               <div key={i} className="group p-8 bg-gradient-to-br from-white to-slate-50 rounded-2xl border border-slate-200 hover:border-[color:var(--primary)]/20 transition-all duration-300 hover:shadow-lg">
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{t.whyChoose?.features?.[i]?.title || ''}</h3>
+                <p className="text-slate-600 leading-relaxed">{t.whyChoose?.features?.[i]?.description || ''}</p>
               </div>
             ))}
           </div>
@@ -254,7 +224,7 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[color:var(--accent)]/20 to-transparent rounded-full blur-3xl"></div>
         </div>
         <div className="relative section py-20 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Visit Us Today</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">{t.cta?.title || 'Visit Us Today'}</h2>
           <p className="text-xl text-slate-300 mb-4 max-w-3xl mx-auto">
             17014 Hillside Ave, Jamaica, NY 11432
           </p>
@@ -268,7 +238,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
             >
-              Get Directions
+              {t.cta?.getDirections || 'Get Directions'}
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>

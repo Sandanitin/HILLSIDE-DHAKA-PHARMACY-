@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -15,7 +16,7 @@ import ScrollToTop from './pages/ScrollToTop';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
@@ -31,7 +32,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Route>
       </Routes>
-    </>
+    </LanguageProvider>
   );
 }
 

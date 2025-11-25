@@ -1,8 +1,10 @@
 import React from 'react'
 import SEO from '@/components/SEO'
 import { Link } from 'react-router-dom'
+import { useTranslations } from '../utils/translationHelpers'
 
 export default function About() {
+  const t = useTranslations('about')
   return (
     <>
       <SEO
@@ -16,10 +18,10 @@ export default function About() {
         <div className="section py-20">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
-              About <span className="bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] bg-clip-text text-transparent">Us</span>
+              {t.hero?.title || 'About'} <span className="bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] bg-clip-text text-transparent">{t.hero?.titleHighlight || 'Us'}</span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">
-              Your trusted neighborhood pharmacy, serving the Jamaica community with care and dedication
+              {t.hero?.subtitle || 'Your trusted neighborhood pharmacy, serving the Jamaica community with care and dedication'}
             </p>
           </div>
         </div>
@@ -30,17 +32,11 @@ export default function About() {
         <div className="section section-y">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Story</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">{t.story?.title || 'Our Story'}</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
-                <p>
-                  Hillside Dhaka Pharmacy has been proudly serving the Jamaica, NY community for many years. Located at 17014 Hillside Ave, we are your local, family-owned pharmacy dedicated to providing exceptional pharmaceutical care and personalized service.
-                </p>
-                <p>
-                  As a community pharmacy in the heart of the Bengali neighborhood, we understand the unique healthcare needs of our diverse community. Our multilingual staff is here to assist you in English and Bengali, ensuring clear communication and understanding of your healthcare needs.
-                </p>
-                <p>
-                  We believe in building lasting relationships with our customers. When you walk through our doors, you're not just a prescription number—you're a valued member of our pharmacy family.
-                </p>
+                {(t.story?.paragraphs || []).map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
               </div>
             </div>
             <div className="relative">
@@ -60,46 +56,22 @@ export default function About() {
       <section className="bg-gradient-to-br from-slate-50 to-white">
         <div className="section section-y">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Values</h2>
-            <p className="text-xl text-slate-600">What drives us every day</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">{t.values?.title || 'Our Values'}</h2>
+            <p className="text-xl text-slate-600">{t.values?.subtitle || 'What drives us every day'}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: '❤️',
-                title: 'Compassionate Care',
-                description: 'We treat every customer with kindness, respect, and genuine concern for their health and well-being.'
-              },
-              {
-                icon: '🎯',
-                title: 'Excellence',
-                description: 'We maintain the highest standards in pharmaceutical care, ensuring accuracy and quality in everything we do.'
-              },
-              {
-                icon: '🤝',
-                title: 'Community Focus',
-                description: 'We\'re committed to serving our neighborhood and building strong relationships with our customers.'
-              },
-              {
-                icon: '💡',
-                title: 'Expert Guidance',
-                description: 'Our licensed pharmacists provide knowledgeable advice and answer all your medication questions.'
-              },
-              {
-                icon: '⏰',
-                title: 'Convenience',
-                description: 'Fast service, free delivery, and flexible hours to fit your busy lifestyle.'
-              },
-              {
-                icon: '🌟',
-                title: 'Trust',
-                description: 'We earn your trust through consistent, reliable service and transparent communication.'
-              }
+              { icon: '❤️' },
+              { icon: '🎯' },
+              { icon: '🤝' },
+              { icon: '💡' },
+              { icon: '⏰' },
+              { icon: '🌟' }
             ].map((value, i) => (
               <div key={i} className="p-8 bg-white rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow duration-300">
                 <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{t.values?.items?.[i]?.title || ''}</h3>
+                <p className="text-slate-600 leading-relaxed">{t.values?.items?.[i]?.description || ''}</p>
               </div>
             ))}
           </div>
@@ -110,29 +82,16 @@ export default function About() {
       <section className="bg-white">
         <div className="section section-y">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Choose Hillside Dhaka Pharmacy?</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">{t.whyChoose?.title || 'Why Choose Hillside Dhaka Pharmacy?'}</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We go above and beyond to ensure you receive the best pharmaceutical care
+              {t.whyChoose?.subtitle || 'We go above and beyond to ensure you receive the best pharmaceutical care'}
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {[
-              '✓ Serving the neighborhood for many years',
-              '✓ Competitive discounts available',
-              '✓ Free home delivery every day',
-              '✓ Hassle-free prescription transfers',
-              '✓ We accept most insurances',
-              '✓ Fast prescription filling (10-15 minutes)',
-              '✓ Walk-ins welcome, no appointment needed',
-              '✓ Multilingual staff (English & Bengali)',
-              '✓ Medication synchronization services',
-              '✓ Immunizations available on-site',
-              '✓ Free medication consultations',
-              '✓ Personalized care and attention'
-            ].map((item, i) => (
+            {(t.whyChoose?.features || []).map((item, i) => (
               <div key={i} className="flex items-center gap-3 p-4 bg-gradient-to-r from-slate-50 to-white rounded-lg border border-slate-200">
                 <div className="text-2xl text-[color:var(--primary)]">✓</div>
-                <span className="text-slate-700 font-medium">{item.replace('✓ ', '')}</span>
+                <span className="text-slate-700 font-medium">{item}</span>
               </div>
             ))}
           </div>
@@ -142,16 +101,16 @@ export default function About() {
       {/* CTA */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="section py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Visit Us Today</h2>
+          <h2 className="text-3xl font-bold mb-4">{t.cta?.title || 'Visit Us Today'}</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Experience the difference of personalized pharmacy care
+            {t.cta?.subtitle || 'Experience the difference of personalized pharmacy care'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
             >
-              Contact Us
+              {t.cta?.contactUs || 'Contact Us'}
             </Link>
             <a
               href="tel:7185262300"

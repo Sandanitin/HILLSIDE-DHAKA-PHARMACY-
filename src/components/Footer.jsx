@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../utils/translations'
 
 export default function Footer() {
+  const { language } = useLanguage()
+  const t = translations[language].footer
+
   return (
     <footer className="bg-gray-900 text-white" aria-label="Footer">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
@@ -10,12 +15,12 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <img src="/images/logo.png" alt="Hillside Dhaka Pharmacy logo" className="h-10 w-auto rounded" loading="lazy" />
-              <span className="font-bold text-2xl text-white">Hillside Dhaka Pharmacy</span>
+              {/* <span className="font-bold text-2xl text-white">Hillside Dhaka Pharmacy</span> */}
             </div>
             <p className="text-gray-300 text-lg mb-6 max-w-md">
               Your local community pharmacy serving the Jamaica, NY neighborhood for many years. Fast prescriptions, free delivery, and personalized care.
             </p>
-            <div className="flex space-x-4">
+            <div className=" flex space-x-4">
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[color:var(--primary)] transition-colors duration-200">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
@@ -69,8 +74,8 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <p className="text-gray-300 text-sm">17014 Hillside Ave</p>
-                <p className="text-gray-300 text-sm">Jamaica, NY 11432</p>
+                <p className="text-gray-300 text-sm">{t.address}</p>
+                <p className="text-gray-300 text-sm">{t.city}</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -81,7 +86,9 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-gray-300 text-sm">718-526-2300</p>
-                <p className="text-gray-300 text-sm">MON-SAT 10AM-7PM</p>
+                <p className="text-gray-300 text-sm">718-526-2399</p>
+                <p className="text-gray-300 text-sm mt-1">{t.hours.weekdays}</p>
+                <p className="text-gray-300 text-sm">{t.hours.sunday}</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -92,7 +99,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-gray-300 text-sm">dhakapharma17014@gmail.com</p>
-                <p className="text-gray-300 text-sm">We'll respond within 24 hours</p>
+                <p className="text-gray-300 text-sm">{t.delivery}</p>
               </div>
             </div>
           </div>
