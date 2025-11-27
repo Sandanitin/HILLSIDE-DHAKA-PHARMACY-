@@ -12,13 +12,14 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
+    dateOfBirth: '',
     message: ''
   })
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const subject = `New Inquiry from ${formData.name}`
-    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0ADate of Birth: ${formData.dateOfBirth}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
     window.location.href = `mailto:dhakapharma17014@gmail.com?subject=${subject}&body=${body}`
   }
 
@@ -76,13 +77,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                    {t.form.emailLabel} *
+                    {t.form.emailLabel}
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    required
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[color:var(--primary)] focus:border-transparent"
@@ -91,16 +91,30 @@ export default function Contact() {
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-                    {t.form.phoneLabel}
+                    {t.form.phoneLabel} *
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
+                    required
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[color:var(--primary)] focus:border-transparent"
                     placeholder={t.form.phonePlaceholder}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="dateOfBirth" className="block text-sm font-medium text-slate-700 mb-2">
+                    Date of Birth
+                  </label>
+                  <input
+                    type="date"
+                    id="dateOfBirth"
+                    name="dateOfBirth"
+                    value={formData.dateOfBirth}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[color:var(--primary)] focus:border-transparent"
                   />
                 </div>
                 <div>
